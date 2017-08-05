@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+		
+	a{
+		display: block;
+		width: 400px;
+		height: 300px;
+		/*margin: 100px auto;*/
+		position: relative;
+		-webkit-transform-style: preserve-3d;   /*加给父元素*/
+		-webkit-transform: perspective(1000px);     /*为 3D 转换元素定义透视视图。*/
+	}
+	img{
+		width:400px;
+		height: 300px;
+	}
+	a div{
+		position: absolute;
+		top: 0;
+		left: 0;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		
+		}
+	a .front{
+		z-index: 1;
+		-webkit-transform: rotateY(0deg);
+		-moz-transform: rotateY(0deg);
+	}
+	a .back{
+		z-index: 2;
+		-webkit-transform: rotateY(-180deg);
+		-moz-transform: rotateY(-180deg);
+	}
+	a:hover .front{
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		z-index: 5;
+	}
+	a:hover .back{
+		-webkit-transform: rotateY(0deg);
+		-moz-transform: rotateY(0deg);
+		z-index: 2;
+	}
+	li{
+		float: left;
+		margin: 5px;
+	}
+
+	</style>
+	<body>
+		<ul>
+			<li>
+				<a  href="">
+					<div class="front">
+						<img src="img/3d/1a.JPG" alt="" />
+					</div>
+					<div class="back">
+						<img src="img/3d/1b.JPG" alt="" />
+					</div>
+				</a>
+			</li>
+			<li>
+				<a  href="">
+					<div class="front">
+						<img src="img/3d/2a.JPG" alt="" />
+					</div>
+					<div class="back">
+						<img src="img/3d/2b.JPG" alt="" />
+					</div>
+				</a>
+			</li>
+			<li>
+				<a  href="">
+					<div class="front">
+						<img src="img/3d/3a.JPG" alt="" />
+					</div>
+					<div class="back">
+						<img src="img/3d/3b.JPG" alt="" />
+					</div>
+				</a>
+			</li>
+			<li>
+				<a  href="">
+					<div class="front">
+						<img src="img/3d/4a.JPG" alt="" />
+					</div>
+					<div class="back">
+						<img src="img/3d/4b.JPG" alt="" />
+					</div>
+				</a>
+			</li>
+			<li>
+				<a  href="">
+					<div class="front">
+						<img src="img/3d/5a.JPG" alt="" />
+					</div>
+					<div class="back">
+						<img src="img/3d/5b.JPG" alt="" />
+					</div>
+				</a>
+			</li>
+			<li>
+				<a  href="">
+					<div class="front">
+						<img src="img/3d/6a.JPG" alt="" />
+					</div>
+					<div class="back">
+						<img src="img/3d/6b.JPG" alt="" />
+					</div>
+				</a>
+			</li>
+		</ul>
+		
+	</body>
+</html>
